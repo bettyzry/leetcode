@@ -15,7 +15,6 @@ class Codec:
         执行用时 : 1792 ms, 在所有 Python3 提交中击败了5.23%的用户
         内存消耗 : 18.4 MB, 在所有 Python3 提交中击败了50.00%的用户
         """
-        # l = ''
         if not root:
             return []
         l = []
@@ -25,11 +24,9 @@ class Codec:
             que = que[1:]
             if node:
                 l.append(node.val)
-                # l = l + str(node.val) + ','
                 que.append(node.left)
                 que.append(node.right)
             else:
-                # l = l + 'null,'
                 l.append(None)
         return l
 
