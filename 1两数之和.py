@@ -1,6 +1,17 @@
 class Solution(object):
     def twoSum(self, nums, target):
         """
+        执行用时：2892 ms, 在所有 Python 提交中击败了38.29%的用户
+        内存消耗：12.8 MB, 在所有 Python 提交中击败了95.72%的用户
+        """
+        for i, num_i in enumerate(nums):
+            for j, num_j in enumerate(nums[i+1:]):
+                if num_i+num_j == target:
+                    return [i, j+i+1]
+        return
+
+    def twoSum2(self, nums, target):
+        """
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
